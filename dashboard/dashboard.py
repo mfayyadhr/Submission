@@ -135,12 +135,12 @@ for i, x in enumerate(columns4):
 plt.tight_layout()
 st.pyplot(fig)
 
-# Guanyuan
+# Guanyuang
 
-st.subheader("Scatter Plot Between Air Pollutants in Guanyuan")
+st.subheader("Scatter Plot Between Air Pollutants in Guanyuang")
 
-Guanyuan_df = pd.read_csv("https://raw.githubusercontent.com/mfayyadhr/Submission/main/data/Guanyuan.csv")
-df5 = Guanyuan_df[['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']]
+Guanyuang_df = pd.read_csv("https://raw.githubusercontent.com/mfayyadhr/Submission/main/data/Guanyuang.csv")
+df5 = Guanyuang_df[['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']]
 columns5= df5.select_dtypes(include='number').columns
 fig, ax = plt.subplots(len(columns5), len(columns5), figsize=(16, 16))
 
