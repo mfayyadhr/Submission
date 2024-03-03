@@ -5,7 +5,7 @@ import streamlit as st
 from babel.numbers import format_currency
 
 # Load used data 
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("https://raw.githubusercontent.com/mfayyadhr/Submission/main/dashboard/all_data.csv")
 
 # plot Worst Air Quality by Air Pollutants
  
