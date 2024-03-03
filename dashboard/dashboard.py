@@ -68,11 +68,11 @@ st.subheader("Scatter Plot Between Air Pollutants in Aotizhongxin")
 
 Aotizhongxin_df = pd.read_csv("https://raw.githubusercontent.com/mfayyadhr/Submission/main/data/Aotizhongxin.csv")
 df1 = Aotizhongxin_df[['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']]
-columns = df1.select_dtypes(include='number').columns
-fig, ax = plt.subplots(len(columns), len(columns), figsize=(16, 16))
+columns1 = df1.select_dtypes(include='number').columns
+fig, ax = plt.subplots(len(columns1), len(columns1), figsize=(16, 16))
 
-for i, x in enumerate(columns):
-    for j, y in enumerate(columns):
+for i, x in enumerate(columns1):
+    for j, y in enumerate(columns1):
       sns.scatterplot(x=x, y=y, data=df1, ax=ax[i, j])
       ax[i, j].set_xlabel(x)
       ax[i, j].set_ylabel(y)
@@ -80,16 +80,18 @@ for i, x in enumerate(columns):
 plt.tight_layout()
 st.pyplot(fig)
 
-# st.subheader("Scatter Plot Between Air Pollutants in Changping")
 
-# # 
+# Changping
+
+st.subheader("Scatter Plot Between Air Pollutants in Changping")
+
 Changping_df = pd.read_csv("https://raw.githubusercontent.com/mfayyadhr/Coba/main/data/Changping.csv")
 df2 = Changping_df[['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']]
-columns = df2.select_dtypes(include='number').columns
-fig, ax = plt.subplots(len(columns), len(columns), figsize=(16, 16))
+columns2 = df2.select_dtypes(include='number').columns
+fig, ax = plt.subplots(len(columns2), len(columns2), figsize=(16, 16))
 
-for i, x in enumerate(columns):
-    for j, y in enumerate(columns):
+for i, x in enumerate(columns2):
+    for j, y in enumerate(columns2):
       sns.scatterplot(x=x, y=y, data=df2, ax=ax[i, j])
       ax[i, j].set_xlabel(x)
       ax[i, j].set_ylabel(y)
