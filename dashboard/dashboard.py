@@ -88,7 +88,7 @@ st.subheader("Scatter Plot Between Air Pollutants in Changping")
 Changping_df = pd.read_csv("https://raw.githubusercontent.com/mfayyadhr/Coba/main/data/Changping.csv")
 df2 = Changping_df[['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']]
 columns2 = df2.select_dtypes(include='number').columns
-fig, ax = plt.subplots(len(columns2), len(columns2), figsize=(16, 16))
+fig2, ax = plt.subplots(len(columns2), len(columns2), figsize=(16, 16))
 
 for i, x in enumerate(columns2):
     for j, y in enumerate(columns2):
@@ -97,6 +97,6 @@ for i, x in enumerate(columns2):
       ax[i, j].set_ylabel(y)
       ax[i, j].set_title(f'{x} vs {y}', fontsize=11)
 plt.tight_layout()
-st.pyplot(fig)
+st.pyplot(fig2)
 
 st.caption('Copyright © Muhammad Fayyadh Rifqi 2024')
